@@ -1,0 +1,43 @@
+*** Novos***
+Áries: 18 de abril a 13 de maio
+Touro: 13 de maio a 12 de junho
+Gêmeos: 21 de junho a 20 de julho
+Câncer: 20 de julho a 10 de agosto
+Leão: 10 de agosto a 16 de setembro
+Virgem: 16 de setembro a 30 de outubro
+Libra: 30 de outubro a 23 de novembro
+Escorpião: 23 de novembro a 29 de novembro
+Ofúcio: 29 de novembro a 17 de dezembro
+Sagitário: 17 de dezembro a 20 de janeiro
+Capricórnio: 20 de janeiro a 15 de fevereiro
+Aquário: 16 de fevereiro a 11 de março
+Peixes: 11 de março a 18 de abril
+
+
+*** Antigos ***
+Áries: de 21 março a 19 abril
+Touro: de 20 abril a 20 maio
+Gêmeos: de 21 maio a 21 junho
+Câncer: de 22 junho a 22 julho
+Leão: de 23 julho a 22 agosto
+Virgem: de 23 agosto a 22 setembro
+Libra:  de 23 setembro a 22 outubro
+Escorpião: de 23 outubro a 21 novembro
+Sagitário: de 22 novembro a 21 dezembro
+Capricórnio: de 22 dezembro a 19 janeiro
+Aquário: de 20 janeiro a 18 fevereiro
+Peixes: de 19 fevereiro a 20 março
+
+02_touro.png
+03_gemeos.png
+04_cancer.png
+05_leao.png
+06_virgem.png
+07_libra.png
+08_escorpiao.png
+09_sagitario.png
+10_capricornio.png
+11_aquario.png
+12_peixes.png
+13_serpentario.png
+Signos.png

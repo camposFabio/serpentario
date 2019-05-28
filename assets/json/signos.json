@@ -1,0 +1,74 @@
+[
+    {
+      "nome": "Capricórnio",
+      "inicio": "22/12",
+      "final": "19/01",
+      "imagem": "capricornio"
+    },
+    {
+      "nome": "Aquário",
+      "inicio": "20/01",
+      "final": "18/02",
+      "imagem": "aquario"
+    },
+    {
+      "nome": "Peixes",
+      "inicio": "19/02",
+      "final": "20/03",
+      "imagem": "peixes"
+    },
+    {
+      "nome": "Áries",
+      "inicio": "21/03",
+      "final": "19/04",
+      "imagem": "aries"
+    },
+    {
+      "nome": "Touro",
+      "inicio": "20/04",
+      "final": "20/05",
+      "imagem": "touro"
+    },
+    {
+      "nome": "Gêmeos",
+      "inicio": "21/05",
+      "final": "21/06",
+      "imagem": "gemeos"
+    },
+    {
+      "nome": "Câncer",
+      "inicio": "22/06",
+      "final": "22/07",
+      "imagem": "cancer"
+    },
+    {
+      "nome": "Leão",
+      "inicio": "23/07",
+      "final": "22/08",
+      "imagem": "leao"
+    },
+    {
+      "nome": "Virgem",
+      "inicio": "23/08",
+      "final": "22/09",
+      "imagem": "virgem"
+    },
+    {
+      "nome": "Libra",
+      "inicio": "23/09",
+      "final": "22/10",
+      "imagem": "libra"
+    },
+    {
+      "nome": "Escorpião",
+      "inicio": "23/10",
+      "final": "21/11",
+      "imagem": "escorpiao"
+    },
+    {
+      "nome": "Sagitário",
+      "inicio": "22/11",
+      "final": "21/12",
+      "imagem": "sagitario"
+    }
+  ]
