@@ -1,74 +1,74 @@
 [
     {
       "nome": "Capricórnio",
-      "inicio": "22/12",
-      "final": "19/01",
-      "imagem": "capricornio"
+      "dtInicio": "22/12",
+      "dtFim": "19/01",
+      "nomeImagem": "capricornio"
     },
     {
       "nome": "Aquário",
-      "inicio": "20/01",
-      "final": "18/02",
-      "imagem": "aquario"
+      "dtInicio": "20/01",
+      "dtFim": "18/02",
+      "nomeImagem": "aquario"
     },
     {
       "nome": "Peixes",
-      "inicio": "19/02",
-      "final": "20/03",
-      "imagem": "peixes"
+      "dtInicio": "19/02",
+      "dtFim": "20/03",
+      "nomeImagem": "peixes"
     },
     {
       "nome": "Áries",
-      "inicio": "21/03",
-      "final": "19/04",
-      "imagem": "aries"
+      "dtInicio": "21/03",
+      "dtFim": "19/04",
+      "nomeImagem": "aries"
     },
     {
       "nome": "Touro",
-      "inicio": "20/04",
-      "final": "20/05",
-      "imagem": "touro"
+      "dtInicio": "20/04",
+      "dtFim": "20/05",
+      "nomeImagem": "touro"
     },
     {
       "nome": "Gêmeos",
-      "inicio": "21/05",
-      "final": "21/06",
-      "imagem": "gemeos"
+      "dtInicio": "21/05",
+      "dtFim": "21/06",
+      "nomeImagem": "gemeos"
     },
     {
       "nome": "Câncer",
-      "inicio": "22/06",
-      "final": "22/07",
-      "imagem": "cancer"
+      "dtInicio": "22/06",
+      "dtFim": "22/07",
+      "nomeImagem": "cancer"
     },
     {
       "nome": "Leão",
-      "inicio": "23/07",
-      "final": "22/08",
-      "imagem": "leao"
+      "dtInicio": "23/07",
+      "dtFim": "22/08",
+      "nomeImagem": "leao"
     },
     {
       "nome": "Virgem",
-      "inicio": "23/08",
-      "final": "22/09",
-      "imagem": "virgem"
+      "dtInicio": "23/08",
+      "dtFim": "22/09",
+      "nomeImagem": "virgem"
     },
     {
       "nome": "Libra",
-      "inicio": "23/09",
-      "final": "22/10",
-      "imagem": "libra"
+      "dtInicio": "23/09",
+      "dtFim": "22/10",
+      "nomeImagem": "libra"
     },
     {
       "nome": "Escorpião",
-      "inicio": "23/10",
-      "final": "21/11",
-      "imagem": "escorpiao"
+      "dtInicio": "23/10",
+      "dtFim": "21/11",
+      "nomeImagem": "escorpiao"
     },
     {
       "nome": "Sagitário",
-      "inicio": "22/11",
-      "final": "21/12",
-      "imagem": "sagitario"
+      "dtInicio": "22/11",
+      "dtFim": "21/12",
+      "nomeImagem": "sagitario"
     }
   ]

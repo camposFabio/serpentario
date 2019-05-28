@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'package:serpentario/page_selector.dart';
+import 'package:serpentario/Signos.dart';
 
 
 void main() => runApp(MyApp());
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: PageSelectorDemo(), // MyHomePage(title: 'Serpentário'),
+      home: Signos(), // MyHomePage(title: 'Serpentário'),
     );
   }
 }

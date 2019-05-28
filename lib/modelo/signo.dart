@@ -1,8 +1,10 @@
 class Signo {
 final String nome;
-final String imagem;
+final String nomeImagem;
+final String dtInicio;
+final String dtFim;
 
-Signo(this.nome, this.imagem);
+Signo(this.nome, this.nomeImagem, this.dtInicio, this.dtFim);
 
 
 factory Signo.fromJson(Map<String, dynamic> json) {
@@ -10,7 +12,9 @@ factory Signo.fromJson(Map<String, dynamic> json) {
 
     return Signo(
       json['nome'],
-      json['imagem'],
+      json['nomeImagem'],
+      json['dtInicio'],
+      json['dtFim'],
     );
   }
 

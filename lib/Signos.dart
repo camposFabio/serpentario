@@ -1,30 +1,60 @@
-// Copyright 2015 The Chromium Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
 import 'package:flutter/material.dart';
 import 'package:serpentario/Mensagem.dart';
 import 'package:serpentario/modelo/signo.dart';
 import 'package:serpentario/repositorio/signoApi.dart';
 
-class _PageSelector extends StatelessWidget {
-  const _PageSelector({this.signos});
+class _Seletor extends StatefulWidget {
+  @override
+  const _Seletor({this.signos});
 
   final List<Signo> signos;
 
-  void _handleArrowButtonPress(BuildContext context, int delta) {
-    final TabController controller = DefaultTabController.of(context);
-    if (!controller.indexIsChanging)
-      controller
-          .animateTo((controller.index + delta).clamp(0, signos.length - 1));
+  _SeletorState createState() => new _SeletorState();
+}
+
+class _SeletorState extends State<_Seletor>
+    with TickerProviderStateMixin {
+  TabController tabController;
+  SignoApi signoApi;
+
+  @override
+  void initState() {
+    super.initState();
+    tabController = new TabController(vsync: this, length: widget.signos.length);
+  }
+
+  @override
+  void dispose() {
+    tabController.dispose();
+    super.dispose();
+  }
+
+  void _handleScroll(DragUpdateDetails details) {
+    print(details.delta.dx);
+    if (details.delta.dx > 0) // Drag Direita
+    {
+      _handleArrowButtonPress(1);
+    } else if (details.delta.dx < 0) // Drag Direita
+    {
+      _handleArrowButtonPress(-1);
+    }
+  }
+
+  void _handleArrowButtonPress(int delta) {
+    int max = widget.signos.length - 1;
+    int index = tabController.index + delta;
+
+    index = index < 0 ? max : index > max ? 0 : index;
+
+    
+     if (!tabController.indexIsChanging) tabController.animateTo(index);
   }
 
   @override
   Widget build(BuildContext context) {
-    final TabController controller = DefaultTabController.of(context);
     final Color color = Theme.of(context).accentColor;
     return DefaultTabController(
-      length: signos.length,
+      length: widget.signos.length,
       child: SafeArea(
         top: false,
         bottom: false,
@@ -38,16 +68,17 @@ class _PageSelector extends StatelessWidget {
                     icon: const Icon(Icons.chevron_left),
                     color: color,
                     onPressed: () {
-                      _handleArrowButtonPress(context, -1);
+                      _handleArrowButtonPress(-1);
                     },
                     tooltip: 'Anterior',
                   ),
-                  TabPageSelector(controller: controller),
+                  TabPageSelector(controller: tabController,
+                  ),
                   IconButton(
                     icon: const Icon(Icons.chevron_right),
                     color: color,
                     onPressed: () {
-                      _handleArrowButtonPress(context, 1);
+                      _handleArrowButtonPress(1);
                     },
                     tooltip: 'Próximo',
                   ),
@@ -62,21 +93,30 @@ class _PageSelector extends StatelessWidget {
                   color: color,
                 ),
                 child: TabBarView(
-                  children: signos.map<Widget>((Signo signo) {
+                  controller: tabController,
+                  children: widget.signos.map<Widget>((Signo signo) {
                     return Container(
                       padding: const EdgeInsets.all(12.0),
                       child: Card(
+                        elevation: 10,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0),
+                          side: BorderSide(color: Colors.blue),
+                        ),
                         child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                          Image.asset('assets/imagem/${signo.imagem}.png'),
-                          Text(
-                            signo.nome,
-                            style: TextStyle(
-                              fontSize: 40,
-                            ),
-                          ),
-                        ]),
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Image.asset(
+                                  'assets/imagem/${signo.nomeImagem}.png'),
+                              Text(
+                                signo.nome,
+                                style: TextStyle(
+                                  fontSize: 40,
+                                ),
+                              ),
+                              Text(signo.dtInicio),
+                              Text(signo.dtFim),
+                            ]),
                       ),
                     );
                   }).toList(),
@@ -90,15 +130,16 @@ class _PageSelector extends StatelessWidget {
   }
 }
 
-class PageSelectorDemo extends StatelessWidget {
+class Signos extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SignoApi signoApi = SignoApi();
 
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.star_border),
+        
         title: const Text('Serpentário'),
+        centerTitle: true,
       ),
       body: FutureBuilder<List<Signo>>(
           future: signoApi.lerSignos('signos.json'),
@@ -112,7 +153,7 @@ class PageSelectorDemo extends StatelessWidget {
                 if (snapshot.hasError) {
                   return Mensagem(mensagem: "Erro ao carregar dados! :(");
                 } else {
-                  return _PageSelector(signos: snapshot.data);
+                  return _Seletor(signos: snapshot.data);
                 }
             }
           }),
